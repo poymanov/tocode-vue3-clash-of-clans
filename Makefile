@@ -32,3 +32,6 @@ frontend-yarn-install:
 
 frontend-ready:
 	docker run --rm -v ${PWD}/app:/app -w /app alpine touch .ready
+
+frontend-lint:
+	docker-compose run --rm frontend-node-cli yarn lint
