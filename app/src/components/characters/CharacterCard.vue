@@ -8,11 +8,15 @@
     <div class="card-body">
       <slot></slot>
     </div>
+    <CharacterStats :stats="stats" />
   </div>
 </template>
 
 <script>
+import CharacterStats from "@/components/characters/CharacterStats.vue";
+
 export default {
+  components: { CharacterStats },
   props: {
     imgUrl: {
       type: String,
@@ -24,6 +28,10 @@ export default {
     },
     title: {
       type: String,
+      required: true,
+    },
+    stats: {
+      type: Array,
       required: true,
     },
   },

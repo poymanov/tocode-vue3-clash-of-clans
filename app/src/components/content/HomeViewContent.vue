@@ -4,6 +4,7 @@
       :imgUrl="character.img"
       :level="character.lvl"
       :title="character.title"
+      :stats="character.info"
     >
       {{ character.descr }}
     </CharacterCard>
