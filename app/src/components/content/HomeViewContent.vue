@@ -1,22 +1,17 @@
 <template>
-  <div v-for="character in characters" :key="character.id">
-    <CharacterCard
-      :imgUrl="character.img"
-      :level="character.lvl"
-      :title="character.title"
-      :stats="character.info"
-    >
-      {{ character.descr }}
-    </CharacterCard>
+  <div class="view-sm isCenter">
+    <CharacterCarousel :characters="items" />
   </div>
 </template>
 
 <script>
-import CharacterCard from "@/components/characters/CharacterCard.vue";
 import items from "@/seeders/items.js";
+import CharacterCarousel from "@/components/characters/CharacterCarousel";
 
 export default {
-  components: { CharacterCard },
+  components: {
+    CharacterCarousel,
+  },
   data() {
     return {
       characters: items,

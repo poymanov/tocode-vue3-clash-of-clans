@@ -14,3 +14,19 @@ export const app = {
     },
   ],
 };
+
+export const carousel = {
+  settings: {
+    itemsToShow: 2,
+    wrapAround: true,
+    snapAlign: "center",
+  },
+  breakpoints: {
+    300: {
+      itemsToShow: 1,
+    },
+    700: {
+      itemsToShow: 2,
+    },
+  },
+};
