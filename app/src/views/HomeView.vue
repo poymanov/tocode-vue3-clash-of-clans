@@ -1,11 +1,21 @@
 <template>
-  <HomeViewContent />
+  <div class="view-sm isCenter">
+    <CharacterCarousel :characters="characters" />
+  </div>
 </template>
 
 <script>
-import HomeViewContent from "@/components/content/HomeViewContent.vue";
+import items from "@/seeders/items.js";
+import CharacterCarousel from "@/components/characters/CharacterCarousel.vue";
 
 export default {
-  components: { HomeViewContent },
+  components: {
+    CharacterCarousel,
+  },
+  data() {
+    return {
+      characters: items,
+    };
+  },
 };
 </script>
