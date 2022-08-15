@@ -4,7 +4,7 @@ services:
     build:
       context: docker/node
     volumes:
-      - ./app:/app
+      - ./:/app
     command: sh -c "until [ -f .ready ] ; do sleep 1 ; done && yarn run dev -- --host"
     ports:
       - "8080:5173"
@@ -12,4 +12,4 @@ services:
     build:
       context: docker/node
     volumes:
-      - ./app:/app
+      - ./:/app

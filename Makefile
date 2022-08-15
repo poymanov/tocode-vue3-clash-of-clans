@@ -23,7 +23,7 @@ docker-build:
 	docker-compose build
 
 frontend-clear:
-	docker run --rm -v ${PWD}/app:/app -w /app alpine sh -c 'rm -rf .ready build'
+	docker run --rm -v ${PWD}/:/app -w / alpine sh -c 'rm -rf .ready build'
 
 frontend-init: frontend-yarn-install frontend-ready
 
@@ -31,7 +31,7 @@ frontend-yarn-install:
 	docker-compose run --rm frontend-node-cli yarn install
 
 frontend-ready:
-	docker run --rm -v ${PWD}/app:/app -w /app alpine touch .ready
+	docker run --rm -v ${PWD}/:/app -w / alpine touch .ready
 
 frontend-lint:
 	docker-compose run --rm frontend-node-cli yarn lint
