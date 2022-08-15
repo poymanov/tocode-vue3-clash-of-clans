@@ -41,6 +41,11 @@ $border-radius-size: 14px;
 .card-body {
   padding: 20px;
   margin-bottom: 16px;
+
+  .link {
+    display: block;
+    margin-top: 16px;
+  }
 }
 
 // .card-footer {

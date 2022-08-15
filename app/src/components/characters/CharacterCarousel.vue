@@ -8,6 +8,10 @@
         :stats="character.info"
       >
         {{ character.descr }}
+
+        <RouterLink :to="`/${character.alias}`" class="link"
+          >See more</RouterLink
+        >
       </CharacterCard>
     </slide>
     <template #addons>

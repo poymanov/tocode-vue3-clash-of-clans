@@ -82,6 +82,19 @@ body {
   }
 }
 
+.character-wrapper {
+  text-align: center;
+
+  .title {
+    color: $default-color;
+  }
+}
+
+.card-stats-character-view {
+  background-color: transparent;
+  margin: 20px 0;
+}
+
 .carousel__prev,
 .carousel__next {
   background-color: #ec9b3b;
