@@ -1,22 +1,13 @@
 <template>
-  <div class="wrapper">
-    <HeaderContent />
-    <div class="wrapper-content">
-      <div class="section">
-        <div class="container">
-          <RouterView />
-        </div>
-      </div>
-    </div>
-    <FooterContent />
-  </div>
+  <MainLayout>
+    <RouterView />
+  </MainLayout>
 </template>
 
 <script>
-import HeaderContent from "@/components/layout/HeaderContent.vue";
-import FooterContent from "@/components/layout/FooterContent.vue";
+import MainLayout from "@/components/layout/MainLayout.vue";
 
 export default {
-  components: { HeaderContent, FooterContent },
+  components: { MainLayout },
 };
 </script>

@@ -11,6 +11,7 @@
           <a
             href="https://tocode.ru/courses/vuejs-3-s-nulya-do-rezultata/"
             class="navbar-link"
+            target="_blank"
             >Сделано на курсе "Vue.js 3 С нуля до результата"</a
           >
         </li>
