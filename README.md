@@ -1,35 +1,48 @@
-# .
+# Clash of Clans
 
-This template should help get you started developing with Vue 3 in Vite.
+Приложение для просмотра информации о персонажах игры [Clash of Clans](https://ru.wikipedia.org/wiki/Clash_of_Clans).
 
-## Recommended IDE Setup
+[Демо](https://tocode-vue3-clash-of-clans.vercel.app).
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+### Особенности
 
-## Customize configuration
+- Vue-Router в связке Vue.js 3
+- Динамические маршруты 
+- Хранение и взаимодействие с данными из Seeders
+- Слайдер с персонажами
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+### Установка
 
-## Project Setup
+Для запуска приложения требуется **Docker** и **Docker Compose**.
 
-```sh
-npm install
+Для инициализации приложения выполнить команду:
+```
+make init
 ```
 
-### Compile and Hot-Reload for Development
+### Управление
 
-```sh
-npm run dev
+Запуск:
+```
+make up
 ```
 
-### Compile and Minify for Production
+Остановка приложения:
 
-```sh
-npm run build
+```
+make down
 ```
 
-### Lint with [ESLint](https://eslint.org/)
+### Интерфейсы
 
-```sh
-npm run lint
+Приложение - http://localhost:8080
+
+### Качество кода
+
 ```
+make frontend-lint
+```
+
+### Цель проекта
+
+Код написан в образовательных целях в рамках курса [Vue.js 3 с нуля до результата](https://tocode.ru/courses/vuejs-3-s-nulya-do-rezultata/).
