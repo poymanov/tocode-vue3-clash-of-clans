@@ -13,17 +13,8 @@ docker-up:
 docker-down:
 	docker-compose down --remove-orphans
 
-docker-down-clear:
-	docker-compose down -v --remove-orphans
-
-docker-pull:
-	docker-compose pull
-
-docker-build:
-	docker-compose build
-
 frontend-clear:
-	docker run --rm -v ${PWD}/:/app -w / alpine sh -c 'rm -rf .ready build'
+	docker run --rm -v ${PWD}:/app -w /app alpine sh -c 'rm -rf .ready'
 
 frontend-init: frontend-yarn-install frontend-ready
 
@@ -31,7 +22,7 @@ frontend-yarn-install:
 	docker-compose run --rm frontend-node-cli yarn install
 
 frontend-ready:
-	docker run --rm -v ${PWD}/:/app -w / alpine touch .ready
+	docker run --rm -v ${PWD}:/app -w /app alpine touch .ready
 
 frontend-lint:
 	docker-compose run --rm frontend-node-cli yarn lint
